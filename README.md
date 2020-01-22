@@ -1,21 +1,24 @@
 # Delphi-Hangul-Parser
 
-#### uses절에 HangulParser를 추가하고 함수를 호출하면 해당 단어를 분리합니다.
-#### (가 ~ 힣에 해당하지 않는 단순 초성과 모음, 알파벳, 특수문자 등은 제외)
+## Feature
+- 단어를 자음/모음으로 분리합니다.
+- 단순 초성과 모음, 알파벳, 특수문자 등은 제외합니다.
 
-##### ***HangulParse(AWord: string; ADelimiter: Char = #0): string;***
+## Function
+- ***HangulParse(AWord: string; ADelimiter: Char = #0): string;***
 
-##### ***예제 1***
+## Example
+- ParseToString
 ```pascal
 memo1.text := HangulParse('강택현');
 ```
-###### 결과 -> ㄱㅏㅇㅌㅐㄱㅎㅕㄴ
-##### ***예제 2***
+> **결과 : ㄱㅏㅇㅌㅐㄱㅎㅕㄴ**
+- ParseToDelimeter
 ```pascal
 memo1.text := HangulParse('강택현', ',');
 ```
-###### 결과 -> ㄱ,ㅏ,ㅇ,ㅌ,ㅐ,ㄱ,ㅎ,ㅕ,ㄴ
-##### ***예제 3***
+> **결과 : ㄱ,ㅏ,ㅇ,ㅌ,ㅐ,ㄱ,ㅎ,ㅕ,ㄴ**
+- ParseToArray
 ```pascal
 var
   arrHangul : TArray<string>;
@@ -29,14 +32,14 @@ begin
   end;
 end;
 ```
-###### 결과 -> 
-###### 1. ㄱ
-###### 2. ㅏ
-###### 3. ㅇ
-###### 4. ㅌ
-###### 5. ㅐ
-###### 6. ㄱ
-###### 7. ㅎ
-###### 8. ㅕ
-###### 9. ㄴ
+> **결과 :** 
+>1. ㄱ
+>2. ㅏ
+>3. ㅇ
+>4. ㅌ
+>5. ㅐ
+>6. ㄱ
+>7. ㅎ
+>8. ㅕ
+>9. ㄴ
 
