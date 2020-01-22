@@ -1,6 +1,9 @@
 # Delphi-Hangul-Parser
 
-#### 함수를 호출하면 단어를 자음/모음으로 분리합니다.
+#### uses절에 HangulParser를 추가하고 함수를 호출하면 해당 단어를 분리합니다.
+#### (가 ~ 힣에 해당하지 않는 단순 초성과 모음, 알파벳, 특수문자 등은 제외)
+
+##### ***HangulParse(AWord: string; ADelimiter: Char = #0): string;***
 
 ##### ***예제 1***
 ```pascal
