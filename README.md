@@ -2,23 +2,23 @@
 
 #### 함수를 호출하면 단어를 자음/모음으로 분리합니다.
 
-##### ***예제1***
+##### ***예제 1***
 ```pascal
 memo1.text := HangulParse('강택현');
 ```
 ###### 결과 -> ㄱㅏㅇㅌㅐㄱㅎㅕㄴ
-##### ***예제2***
+##### ***예제 2***
 ```pascal
-memo1.text := HangulParse(Edit1.Text, ',');
+memo1.text := HangulParse('강택현', ',');
 ```
 ###### 결과 -> ㄱ,ㅏ,ㅇ,ㅌ,ㅐ,ㄱ,ㅎ,ㅕ,ㄴ
-##### ***예제3***
+##### ***예제 3***
 ```pascal
 var
   arrHangul : TArray<string>;
   I: Integer;
 begin
-  arrHangul := HangulParse(Edit1.Text, ',').Split([',']);
+  arrHangul := HangulParse('강택현', ',').Split([',']);
 
   for I := 0 to High(arrHangul) do
   begin
