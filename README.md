@@ -2,14 +2,14 @@
 
 #### 함수를 호출하면 단어를 자음/모음으로 분리합니다.
 
-##### 예제
-'''pascal
+##### ***예제***
+```pascal
 memo1.text := HangulParse('강택현');
-'''
+```
 ###### 결과
 ###### -> ㄱㅏㅇㅌㅐㄱㅎㅕㄴ
 
-'''pascal
+```pascal
 var
   arrHangul : TArray<string>;
   I: Integer;
@@ -21,6 +21,7 @@ begin
     memo1.Lines.Add(inttostr(I+1) + '. ' + (arrHangul[I]));
   end;
 end;
+```
 
 ###### 결과
 ###### -> 
@@ -34,9 +35,9 @@ end;
 ###### 8. ㅕ
 ###### 9. ㄴ
 
-'''pascal
+```pascal
 memo1.text := HangulParse(Edit1.Text, ',');
-'''
+```
 ###### 결과
 ###### -> ㄱ,ㅏ,ㅇ,ㅌ,ㅐ,ㄱ,ㅎ,ㅕ,ㄴ
 
