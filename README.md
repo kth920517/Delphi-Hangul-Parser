@@ -10,17 +10,17 @@
 ## Example
 - ParseToString
 ```pascal
-memo1.text := HangulParse('강택현');
+memo1.text := HangulParse('테스트');
 ```
 ```
-결과 : ㄱㅏㅇㅌㅐㄱㅎㅕㄴ
+결과 : ㅌㅔㅅㅡㅌㅡ
 ```
 - ParseToDelimeter
 ```pascal
-memo1.text := HangulParse('강택현', ',');
+memo1.text := HangulParse('테스트', ',');
 ```
 ```
-결과 : ㄱ,ㅏ,ㅇ,ㅌ,ㅐ,ㄱ,ㅎ,ㅕ,ㄴ
+결과 : ㅌ,ㅔ,ㅅ,ㅡ,ㅌ,ㅡ
 ```
 - ParseToArray
 ```pascal
@@ -28,7 +28,7 @@ var
   arrHangul : TArray<string>;
   I: Integer;
 begin
-  arrHangul := HangulParse('강택현', ',').Split([',']);
+  arrHangul := HangulParse('테스트', ',').Split([',']);
 
   for I := 0 to High(arrHangul) do
   begin
@@ -38,14 +38,11 @@ end;
 ```
 ```
 결과 : 
-1. ㄱ
-2. ㅏ
-3. ㅇ
-4. ㅌ
-5. ㅐ
-6. ㄱ
-7. ㅎ
-8. ㅕ
-9. ㄴ
+1. ㅌ
+2. ㅔ
+3. ㅅ
+4. ㅡ
+5. ㅌ
+6. ㅡ
 ```
 
